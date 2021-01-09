@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Trader.Domain.Models
 {
-    class Account
+    public class Account : DomainObjectId
     {
+        public User AccountHolder { get; set; }
+        public double Balance { get; set; }
+        public IEnumerable<AssetTransaction> AssetTransactions { get; set; }
+
     }
 }
