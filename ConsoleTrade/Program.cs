@@ -17,7 +17,9 @@ namespace ConsoleTrade
             service.Delete(3).Wait();
             service.Delete(2).Wait();
 
+
             var res =  service.GetAll();
+            //service.
             foreach (var item in res.Result)
             {
                 Console.WriteLine("UserName: {0}", item.Id);
